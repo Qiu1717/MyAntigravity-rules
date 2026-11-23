@@ -14,6 +14,9 @@
 4. **收工给完整交付**：任务结束时输出完整的改动总结与结果汇报。
 
 ## 云端规则跨设备同步规范
-- 少爷的全局规则云端仓库为：`https://github.com/Qiu1717/MyAntigravity-rules.git`（本地绑定路径：`~/.gemini/config/plugins/user-rules`）。
-- **改规则必上云**：每当少爷要求新增、修改或删除任何全局规则/技能时，必须同步更新 `~/.gemini/config/plugins/user-rules/rules/AGENTS.md` 与 `~/.gemini/GEMINI.md`，并立即在 `~/.gemini/config/plugins/user-rules` 目录下执行 `git add . && git commit -m "..." && git push` 推送至 GitHub 云端。
-- **跨设备拉取同步**：当少爷提及“同步规则”或在新设备首次工作时，主动在 `~/.gemini/config/plugins/user-rules` 执行 `git pull --rebase` 并同步至 `~/.gemini/GEMINI.md`，确保多端规则完全一致。
+- 少爷的全局规则与全量环境云端仓库为：`https://github.com/Qiu1717/MyAntigravity-rules.git`（本地绑定路径：`~/.gemini/config/plugins/user-rules`）。
+- **改规则/装插件必上云**：
+  1. 每当少爷要求新增、修改或删除任何全局规则时，必须同步更新 `~/.gemini/config/plugins/user-rules/rules/AGENTS.md` 与 `~/.gemini/GEMINI.md`。
+  2. 每当少爷新安装、卸载或更新了任何插件（Marketplace 插件或 GitHub 社区插件）或 Skill 时，必须同步更新 `~/.gemini/config/plugins/user-rules/environment-manifest.json`、`README.md` 与 `restore-env.ps1`。
+  3. 每次更新完成后，必须立即在 `~/.gemini/config/plugins/user-rules` 目录下执行 `git add . && git commit -m "..." && git push` 推送至 GitHub 云端。
+- **跨设备拉取与一键复刻同步**：当少爷提及“同步规则/同步环境”或在新设备首次工作时，主动在 `~/.gemini/config/plugins/user-rules` 执行 `git pull --rebase`，同步 `GEMINI.md`，并按 `environment-manifest.json` 与 `README.md` 检查补齐缺失的插件与 Skills。

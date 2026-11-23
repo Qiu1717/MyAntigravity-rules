@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0.0",
+  "owner": "少爷 (Qiu1717)",
+  "updatedAt": "2026-11-23T20:46:00+08:00",
+  "defaultWorkspace": "E:\\Antigravtiy-workspace",
+  "rulesRepository": "https://github.com/Qiu1717/MyAntigravity-rules.git",
+  "globalRules": [
+    {
+      "sourceInRepo": "rules/AGENTS.md",
+      "targets": [
+        "~/.gemini/config/plugins/user-rules/rules/AGENTS.md",
+        "~/.gemini/GEMINI.md"
+      ]
+    }
+  ],
+  "communityGitHubPlugins": [
+    {
+      "name": "agy-dart",
+      "displayName": "agy-dart",
+      "version": "1.5.0",
+      "repository": "https://github.com/zou172866/agy-dart.git",
+      "installDir": "~/.gemini/config/plugins/agy-dart",
+      "installCommand": "git clone https://github.com/zou172866/agy-dart.git \"$env:TEMP\\agy-dart-src\"; node \"$env:TEMP\\agy-dart-src\\scripts\\install.mjs\"",
+      "skills": ["agy-dart"],
+      "mcpServers": ["agy-dart_fast", "agy-dart_context"],
+      "hasRules": true,
+      "hasHooks": true
+    },
+    {
+      "name": "antigravity-context-monitor",
+      "displayName": "Antigravity Context Monitor",
+      "version": "1.17.6",
+      "repository": "https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git",
+      "installDir": "~/.gemini/config/plugins/antigravity-context-monitor",
+      "installCommand": "git clone https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git \"$env:TEMP\\acm-src\"; node \"$env:TEMP\\acm-src\\scripts\\install-app-plugin.mjs\"",
+      "skills": ["context-monitor"],
+      "sidecars": ["antigravity-context-monitor/context_monitor"]
+    }
+  ],
+  "officialMarketplacePlugins": [
+    {
+      "name": "android-cli-plugin",
+      "catalogId": "antigravity-plugins-official/plugin/android-cli-plugin",
+      "version": "1.0.16625370",
+      "skills": ["android-cli", "android-device-hub", "compose-preview"],
+      "sidecars": ["android-cli-plugin/compose-preview", "android-cli-plugin/device-hub"]
+    },
+    {
+      "name": "firebase",
+      "catalogId": "antigravity-plugins-official/plugin/firebase",
+      "version": "1.0.3",
+      "skills": [
+        "extension-to-functions-codebase",
+        "firebase-ai-logic-basics",
+        "firebase-app-hosting-basics",
+        "firebase-auth-basics",
+        "firebase-basics",
+        "firebase-crashlytics",
+        "firebase-data-connect",
+        "firebase-firestore",
+        "firebase-hosting-basics",
+        "firebase-remote-config-basics",
+        "firebase-security-rules-auditor",
+        "firestore-rules-creation",
+        "xcode-project-setup"
+      ],
+      "agents": ["firestore-rules-author"]
+    },
+    {
+      "name": "gdocs",
+      "catalogId": "antigravity-plugins-official/plugin/gdocs",
+      "version": "0.0.9",
+      "skills": ["gdocs"]
+    },
+    {
+      "name": "gmail",
+      "catalogId": "antigravity-plugins-official/plugin/gmail",
+      "version": "0.0.7",
+      "skills": ["gmail"]
+    },
+    {
+      "name": "gsheets",
+      "catalogId": "antigravity-plugins-official/plugin/gsheets",
+      "version": "0.0.8",
+      "skills": ["gsheets"]
+    },
+    {
+      "name": "gslides",
+      "catalogId": "antigravity-plugins-official/plugin/gslides",
+      "version": "0.0.8",
+      "skills": ["gslides"]
+    }
+  ],
+  "builtinPlugins": [
+    {
+      "name": "swarm",
+      "enabled": true,
+      "sidecars": ["swarm/swarm_board"]
+    }
+  ],
+  "recommendedUserSettings": {
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "enableTerminalSandbox": false,
+    "nonWorkspaceFileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "orchestratorModel": "MODEL_PLACEHOLDER_M532",
+    "orchestratorExecutorModel": "MODEL_PLACEHOLDER_M525",
+    "permissionPreset": "AGENT_PERMISSION_PRESET_TURBO",
+    "verboseConversationSteps": true
+  }
+}
