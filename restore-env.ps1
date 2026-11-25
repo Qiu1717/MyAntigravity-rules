@@ -47,5 +47,15 @@ if (Test-Path "$acmTmp\scripts\install-app-plugin.mjs") {
 Remove-Item -Recurse -Force $acmTmp -ErrorAction SilentlyContinue
 Write-Host "  -> antigravity-context-monitor 安装完成！" -ForegroundColor Green
 
+# 3. antigravity-context-viewer
+$workspaceBase = if (Test-Path "E:\") { "E:\Antigravtiy-workspace" } else { "D:\Antigravtiy-workspace" }
+$acvDir = "$workspaceBase\antigravity-context-viewer"
+if (-not (Test-Path $acvDir)) {
+    New-Item -ItemType Directory -Force -Path $workspaceBase | Out-Null
+    git clone --depth 1 https://github.com/elviscjn-cjn/antigravity-context-viewer.git $acvDir
+}
+node "$acvDir\cli.js" install
+Write-Host "  -> antigravity-context-viewer 安装完成！" -ForegroundColor Green
+
 Write-Host "=== [4/4] 自动化恢复脚本执行完毕！ ===" -ForegroundColor Cyan
 Write-Host "请 Agent 继续输出 6 张官方 Marketplace 插件安装卡片供少爷一键点击安装。" -ForegroundColor Green

@@ -35,6 +35,15 @@
       "installCommand": "git clone https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git \"$env:TEMP\\acm-src\"; node \"$env:TEMP\\acm-src\\scripts\\install-app-plugin.mjs\"",
       "skills": ["context-monitor"],
       "sidecars": ["antigravity-context-monitor/context_monitor"]
+    },
+    {
+      "name": "antigravity-context-viewer",
+      "displayName": "Antigravity 对话上下文查看器与 Token 看板",
+      "version": "0.9.3",
+      "repository": "https://github.com/elviscjn-cjn/antigravity-context-viewer.git",
+      "installDir": "<workspace>/antigravity-context-viewer",
+      "installCommand": "git clone --depth 1 https://github.com/elviscjn-cjn/antigravity-context-viewer.git \"<workspace>\\antigravity-context-viewer\"; node \"<workspace>\\antigravity-context-viewer\\cli.js\" install",
+      "type": "asar-patcher"
     }
   ],
   "officialMarketplacePlugins": [
