@@ -29,10 +29,11 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\plugins\user-rule
 该脚本会自动完成：
 1. 将 `user-rules` 绑定至 `~/.gemini/config/plugins/user-rules`，并将 `rules/AGENTS.md` 同步覆盖到 `~/.gemini/GEMINI.md`。
 2. 自动检查并创建默认工作区 `E:\Antigravtiy-workspace`（若公司电脑无 E 盘，请主动询问少爷在公司电脑希望使用哪个盘符路径作为工作区）。
-3. 自动从 GitHub 克隆并安装少爷必装的 2 个高阶社区插件：
+3. 自动从 GitHub 克隆并安装少爷必装的高阶社区插件：
    - **`agy-dart` (v1.5.0)**：`https://github.com/zou172866/agy-dart.git`（包含 `agy-dart` 技能、`agy-dart_fast` 与 `agy-dart_context` 双 MCP 加速引擎、KV-Cache 保护规则与 Hooks）。
    - **`antigravity-context-monitor` (v1.17.6)**：`https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git`（包含 `context-monitor` 技能与实时上下文监控 Sidecar 面板）。
    - **`antigravity-context-viewer` (v0.9.3)**：`https://github.com/elviscjn-cjn/antigravity-context-viewer.git`（注入客户端顶栏上下文与 Token 用量看板、模型配额与可选汉化/代理增强）。
+   - **`obsidian-prism` (v1.0.8-beta.3)**：`https://github.com/RMvdesi/obsidian-prism.git`（原生光学界面套件：四套深浅主题、512K 上下文试管、推理滑块、像素伙伴、思考转译与 Omni 检视台）。
 
 ### 第二步：在聊天回复中直接渲染 6 张官方插件市场卡片供少爷一键点装
 由于 Antigravity 安全沙箱限制 subprocess 直接调用 `InstallCustomization`，你**必须在给少爷的回复中，将以下 6 张官方插件卡片（每张独立一行）直接原样输出在 Markdown 回复里**，让少爷在聊天界面轻轻点 6 下即可完成官方插件与对应 20 个 Skills 的安装（若检测到某个已安装则跳过）：
@@ -56,6 +57,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\plugins\user-rule
 - `[user-rules](customization://user-rules)`
 - `[agy-dart](customization://agy-dart)`
 - `[Antigravity Context Monitor](customization://antigravity-context-monitor)`
+- `[Obsidian Prism](customization://obsidian-prism)`
 
 并提醒少爷可以在 Settings 中将权限预设调为 **Turbo Mode**（对应 `AGENT_PERMISSION_PRESET_TURBO`）。
 
@@ -69,6 +71,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\plugins\user-rule
 | **社区插件** | `agy-dart` | `https://github.com/zou172866/agy-dart.git` | Skill: `agy-dart`<br>MCP: `agy-dart_fast`, `agy-dart_context`<br>Rule: `rules/AGENTS.md` + 5 Lifecycle Hooks |
 | **社区插件** | `antigravity-context-monitor` | `https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git` | Skill: `context-monitor`<br>Sidecar: `context_monitor` |
 | **社区插件** | `antigravity-context-viewer` | `https://github.com/elviscjn-cjn/antigravity-context-viewer.git` | ASAR 注入：顶栏上下文与 Token 用量看板、模型配额、生成速度与系统增强 |
+| **社区插件** | `obsidian-prism` | `https://github.com/RMvdesi/obsidian-prism.git` | Sidecar: `daemon`<br>原生光学界面套件：四套深浅主题、512K 上下文试管、推理滑块、思考转译、Omni 检视台与壁纸通道 |
 | **官方市场** | `android-cli-plugin` | `antigravity-plugins-official/plugin/android-cli-plugin` | Skills: `android-cli`, `android-device-hub`, `compose-preview` |
 | **官方市场** | `firebase` | `antigravity-plugins-official/plugin/firebase` | Skills (13个): `firebase-basics`, `firebase-auth-basics`, `firebase-firestore`, `firestore-rules-creation`, `firebase-security-rules-auditor`, `firebase-hosting-basics`, `firebase-app-hosting-basics`, `firebase-data-connect`, `firebase-ai-logic-basics`, `firebase-crashlytics`, `firebase-remote-config-basics`, `extension-to-functions-codebase`, `xcode-project-setup`<br>Subagent: `firestore-rules-author` |
 | **官方市场** | `gdocs` | `antigravity-plugins-official/plugin/gdocs` | Skill: `gdocs` |

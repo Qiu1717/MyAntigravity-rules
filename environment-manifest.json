@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "owner": "少爷 (Qiu1717)",
-  "updatedAt": "2026-11-23T20:46:00+08:00",
+  "updatedAt": "2026-11-26T12:40:37+08:00",
   "defaultWorkspace": "E:\\Antigravtiy-workspace",
   "rulesRepository": "https://github.com/Qiu1717/MyAntigravity-rules.git",
   "globalRules": [
@@ -44,6 +44,17 @@
       "installDir": "<workspace>/antigravity-context-viewer",
       "installCommand": "git clone --depth 1 https://github.com/elviscjn-cjn/antigravity-context-viewer.git \"<workspace>\\antigravity-context-viewer\"; node \"<workspace>\\antigravity-context-viewer\\cli.js\" install",
       "type": "asar-patcher"
+    },
+    {
+      "name": "obsidian-prism",
+      "displayName": "Obsidian Prism",
+      "version": "1.0.8-beta.3",
+      "repository": "https://github.com/RMvdesi/obsidian-prism.git",
+      "installDir": "~/.gemini/config/plugins/obsidian-prism",
+      "sourceDir": "<workspace>/obsidian-prism",
+      "installCommand": "git clone https://github.com/RMvdesi/obsidian-prism.git \"<workspace>\\obsidian-prism\"; node \"<workspace>\\obsidian-prism\\tools\\install-plugin.cjs\" --install",
+      "sidecars": ["obsidian-prism/daemon"],
+      "type": "native-plugin"
     }
   ],
   "officialMarketplacePlugins": [

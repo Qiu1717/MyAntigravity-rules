@@ -57,5 +57,16 @@ if (-not (Test-Path $acvDir)) {
 node "$acvDir\cli.js" install
 Write-Host "  -> antigravity-context-viewer 安装完成！" -ForegroundColor Green
 
+# 4. obsidian-prism
+$opDir = "$workspaceBase\obsidian-prism"
+if (Test-Path "$opDir\.git") {
+    git -C $opDir pull --ff-only
+} else {
+    New-Item -ItemType Directory -Force -Path $workspaceBase | Out-Null
+    git clone https://github.com/RMvdesi/obsidian-prism.git $opDir
+}
+node "$opDir\tools\install-plugin.cjs" --install
+Write-Host "  -> obsidian-prism 安装完成！" -ForegroundColor Green
+
 Write-Host "=== [4/4] 自动化恢复脚本执行完毕！ ===" -ForegroundColor Cyan
 Write-Host "请 Agent 继续输出 6 张官方 Marketplace 插件安装卡片供少爷一键点击安装。" -ForegroundColor Green
