@@ -27,9 +27,9 @@ Write-Host "=== [3/4] 正在安装/更新 GitHub 社区高阶插件 (agy-dart & 
 # 1. agy-dart
 $agyDartTmp = "$env:TEMP\agy-dart-install"
 if (Test-Path $agyDartTmp) { Remove-Item -Recurse -Force $agyDartTmp }
-git clone --depth 1 https://github.com/zou172866/agy-dart.git $agyDartTmp
+git clone --depth 1 https://github.com/zou172866/Antigravity-agy-dart.git $agyDartTmp
 if (Test-Path "$agyDartTmp\scripts\install.mjs") {
-    node "$agyDartTmp\scripts\install.mjs"
+    node "$agyDartTmp\scripts\install.mjs" install --install-rg
 } else {
     if (Test-Path "$pluginsRoot\agy-dart") { Remove-Item -Recurse -Force "$pluginsRoot\agy-dart" }
     Copy-Item -Recurse -Force $agyDartTmp "$pluginsRoot\agy-dart"

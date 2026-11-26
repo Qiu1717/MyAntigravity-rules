@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "owner": "少爷 (Qiu1717)",
-  "updatedAt": "2026-11-26T12:40:37+08:00",
+  "updatedAt": "2026-11-26T13:17:30+08:00",
   "defaultWorkspace": "E:\\Antigravtiy-workspace",
   "rulesRepository": "https://github.com/Qiu1717/MyAntigravity-rules.git",
   "globalRules": [
@@ -17,10 +17,10 @@
     {
       "name": "agy-dart",
       "displayName": "agy-dart",
-      "version": "1.5.0",
-      "repository": "https://github.com/zou172866/agy-dart.git",
+      "version": "1.7.2",
+      "repository": "https://github.com/zou172866/Antigravity-agy-dart.git",
       "installDir": "~/.gemini/config/plugins/agy-dart",
-      "installCommand": "git clone https://github.com/zou172866/agy-dart.git \"$env:TEMP\\agy-dart-src\"; node \"$env:TEMP\\agy-dart-src\\scripts\\install.mjs\"",
+      "installCommand": "git clone --depth 1 https://github.com/zou172866/Antigravity-agy-dart.git \"$env:TEMP\\agy-dart-src\"; node \"$env:TEMP\\agy-dart-src\\scripts\\install.mjs\" install --install-rg",
       "skills": ["agy-dart"],
       "mcpServers": ["agy-dart_fast", "agy-dart_context"],
       "hasRules": true,

@@ -30,7 +30,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\plugins\user-rule
 1. 将 `user-rules` 绑定至 `~/.gemini/config/plugins/user-rules`，并将 `rules/AGENTS.md` 同步覆盖到 `~/.gemini/GEMINI.md`。
 2. 自动检查并创建默认工作区 `E:\Antigravtiy-workspace`（若公司电脑无 E 盘，请主动询问少爷在公司电脑希望使用哪个盘符路径作为工作区）。
 3. 自动从 GitHub 克隆并安装少爷必装的高阶社区插件：
-   - **`agy-dart` (v1.5.0)**：`https://github.com/zou172866/agy-dart.git`（包含 `agy-dart` 技能、`agy-dart_fast` 与 `agy-dart_context` 双 MCP 加速引擎、KV-Cache 保护规则与 Hooks）。
+   - **`agy-dart` (v1.7.2)**：`https://github.com/zou172866/Antigravity-agy-dart.git`（包含 `agy-dart` 技能、`agy-dart_fast` 与 `agy-dart_context` 双 MCP 加速引擎、KV-Cache 保护规则、Hooks 与 Sidecar 监控看板）。
    - **`antigravity-context-monitor` (v1.17.6)**：`https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git`（包含 `context-monitor` 技能与实时上下文监控 Sidecar 面板）。
    - **`antigravity-context-viewer` (v0.9.3)**：`https://github.com/elviscjn-cjn/antigravity-context-viewer.git`（注入客户端顶栏上下文与 Token 用量看板、模型配额与可选汉化/代理增强）。
    - **`obsidian-prism` (v1.0.8-beta.3)**：`https://github.com/RMvdesi/obsidian-prism.git`（原生光学界面套件：四套深浅主题、512K 上下文试管、推理滑块、像素伙伴、思考转译与 Omni 检视台）。
@@ -68,7 +68,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\plugins\user-rule
 | 类别 | 插件名称 (`dir`) | 来源 / Catalog ID | 包含的 Skills / Agents / MCP |
 | :--- | :--- | :--- | :--- |
 | **底层规则** | `user-rules` | `https://github.com/Qiu1717/MyAntigravity-rules.git` | `rules/AGENTS.md` + `~/.gemini/GEMINI.md` |
-| **社区插件** | `agy-dart` | `https://github.com/zou172866/agy-dart.git` | Skill: `agy-dart`<br>MCP: `agy-dart_fast`, `agy-dart_context`<br>Rule: `rules/AGENTS.md` + 5 Lifecycle Hooks |
+| **社区插件** | `agy-dart` | `https://github.com/zou172866/Antigravity-agy-dart.git` | Skill: `agy-dart`<br>MCP: `agy-dart_fast`, `agy-dart_context`<br>Rule: `rules/AGENTS.md` + 5 Lifecycle Hooks |
 | **社区插件** | `antigravity-context-monitor` | `https://github.com/AGI-is-going-to-arrive/Antigravity-Context-Window-Monitor.git` | Skill: `context-monitor`<br>Sidecar: `context_monitor` |
 | **社区插件** | `antigravity-context-viewer` | `https://github.com/elviscjn-cjn/antigravity-context-viewer.git` | ASAR 注入：顶栏上下文与 Token 用量看板、模型配额、生成速度与系统增强 |
 | **社区插件** | `obsidian-prism` | `https://github.com/RMvdesi/obsidian-prism.git` | Sidecar: `daemon`<br>原生光学界面套件：四套深浅主题、512K 上下文试管、推理滑块、思考转译、Omni 检视台与壁纸通道 |
